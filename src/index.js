@@ -1,7 +1,7 @@
-import "./styles.css";
+import "./styles/index.css";
 import "web-animations-js";
 import fs from "fs";
-import MapPopulator from "./mapPopulator.js";
+import MapPopulator from "./modules/mapPopulator.js";
 
 const Map = fs.readFileSync(__dirname + "/map.svg", "utf8");
 const app = document.querySelector("#app");
