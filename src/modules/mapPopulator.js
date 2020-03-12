@@ -60,7 +60,7 @@ class MapPopulator {
     };
     
     let lineAnimation =  new KeyframeEffect(trainEl, this.keyframeObj, animationSettings);
-    let animation = new Animation(lineAnimation);
+    let animation = new Animation(lineAnimation, document.timeline);
     
     animation.play();
 

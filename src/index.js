@@ -1,6 +1,6 @@
 import "./styles/index.css";
-import "web-animations-js";
 import fs from "fs";
+import "web-animations-js/web-animations-next-lite.min.js";
 import MapPopulator from "./modules/mapPopulator.js";
 
 const Map = fs.readFileSync(__dirname + "/map.svg", "utf8");
