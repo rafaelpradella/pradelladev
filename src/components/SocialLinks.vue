@@ -1,25 +1,39 @@
 <template>
     <ul>
-        <li><a class="u-github" href="https://github.com/rafaelpradella" title="Meu perfil no GitHub" target="_blank" rel="noopener"></a></li>
-        <li><a class="u-codesandbox" href="https://codesandbox.io/u/rafaelpradella" title="Meu perfil no CodeSandbox" target="_blank" rel="noopener"></a></li>
-        <li><a class="u-linkedin" href="https://www.linkedin.com/in/rafael-pradella-14745142/" title="Meu perfil no LinkedIn" target="_blank" rel="noopener"></a></li>
+        <li>
+            <a class="u-github" href="https://github.com/rafaelpradella" title="My GitHub profile" target="_blank" rel="noopener">
+                <Icons id="github" :is-presentation="false" />
+            </a>
+        </li>
+        <li>
+            <a class="u-codesandbox" href="https://codesandbox.io/u/rafaelpradella" title="My CodeSa profilendbox" target="_blank" rel="noopener">
+                <Icons id="codesandbox" :is-presentation="false" />
+            </a>
+        </li>
+        <li>
+            <a class="u-linkedin" href="https://www.linkedin.com/in/rafael-pradella-14745142/" title="My Linked profileIn" target="_blank" rel="noopener">
+                <Icons id="linkedin" :is-presentation="false" />
+            </a>
+        </li>
     </ul>
 </template>
 
 <script>
-
+import Icons from "~/components/Icons.vue";
 export default {
+    components: { Icons },
     data: function(){
         return{}
     }
 }
 </script>
 
-<style style="less" scoped>
+<style scoped>
     ul{ display: block; padding: 0;}
     li{ display: inline-block; list-style: none; margin-right: 15px;}
-    a{ border-radius: 100%; display: inline-block; fill: var(--text); width: 48px; height: 48px;}
+    a{ border-radius: 100%; display: flex; align-items: center; justify-content: center; width: 48px; height: 48px;}
     a:hover, a:active{ opacity: .8;}
+    svg{ width: 24px; fill: var(--background);}
     .u-github{ background-color: var(--line-light);}
     .u-codesandbox{ background-color: var(--line-yellow);}
     .u-linkedin{ background-color: var(--line-blue);}

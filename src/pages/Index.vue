@@ -32,6 +32,6 @@ export default {
 <style>
   section{ background-color: var(--background); overflow: hidden;}
   section#start{ background-color: var(--map-ocean); display: grid; grid-gap: 40px; grid-template-columns: 1fr 1fr; height: 90vh; align-items: center;}
-  svg{ position: relative; left: -20%; width: 120%; max-width: 120%;}
+  svg#map{ position: relative; left: -20%; width: 120%; max-width: 120%;}
   .u-col{ position: relative; display: inline-block; overflow: hidden; padding: 40px;}
 </style>
