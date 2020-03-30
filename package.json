@@ -1,18 +1,13 @@
 {
-  "name": "subway-map-flux",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
+  "name": "map",
+  "private": true,
   "scripts": {
-    "start": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
   },
-  "devDependencies": {
-    "@babel/core": "7.5.5",
-    "parcel-bundler": "^1.12.4"
-  },
-  "keywords": [],
   "dependencies": {
+    "gridsome": "^0.7.0",
     "web-animations-js": "^2.3.2"
   }
 }
