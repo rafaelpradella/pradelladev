@@ -1,8 +1,8 @@
 <template>
     <ul>
-        <li><a class="u-github" href="https://github.com/rafaelpradella" title="Meu perfil no GitHub" target="_blank"></a></li>
-        <li><a class="u-codesandbox" href="https://codesandbox.io/u/rafaelpradella" title="Meu perfil no CodeSandbox" target="_blank"></a></li>
-        <li><a class="u-linkedin" href="https://www.linkedin.com/in/rafael-pradella-14745142/" title="Meu perfil no LinkedIn" target="_blank"></a></li>
+        <li><a class="u-github" href="https://github.com/rafaelpradella" title="Meu perfil no GitHub" target="_blank" rel="noopener"></a></li>
+        <li><a class="u-codesandbox" href="https://codesandbox.io/u/rafaelpradella" title="Meu perfil no CodeSandbox" target="_blank" rel="noopener"></a></li>
+        <li><a class="u-linkedin" href="https://www.linkedin.com/in/rafael-pradella-14745142/" title="Meu perfil no LinkedIn" target="_blank" rel="noopener"></a></li>
     </ul>
 </template>
 
