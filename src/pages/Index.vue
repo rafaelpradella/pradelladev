@@ -18,7 +18,6 @@
 </template>
 
 <script>
-import "web-animations-js/web-animations-next-lite.min.js";
 import Map from '~/components/Map/Map.vue'
 import SocialLinks from '~/components/SocialLinks.vue'
 export default {

@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import "web-animations-js/web-animations-next-lite.min.js";
 import config from "~/components/Map/LinesConfig";
 import PathToArray from "~/components/Map/PathToArray";
 
