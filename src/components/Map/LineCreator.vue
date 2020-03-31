@@ -74,7 +74,6 @@ export default {
 </script>
 
 <style scoped>
-
     circle{
         fill: var(--background);
         opacity: .5;
@@ -85,5 +84,9 @@ export default {
     }
     .u-lineStroke{ 
         fill: inherit!important;
+    }
+
+    @media(max-width: 720px){
+        circle{ opacity: .6; r: 10px;}
     }
 </style>

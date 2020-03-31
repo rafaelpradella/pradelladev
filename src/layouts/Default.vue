@@ -14,7 +14,7 @@ query {
 
 <style>
 :root {
-  
+  font-size: 16px;
   --background: #000;
   --text: #E9E9E9;
   --link: #f5cc12;
@@ -51,6 +51,18 @@ query {
     --line-light: #9C9A8C;
     --line-emerald: #14AD90;
     --line-purple: #A5378B;
+  }
+}
+
+@media(max-width: 720px){
+  :root{
+    font-size: 13px;
+  }
+}
+
+@media(max-width: 360px){
+  :root{
+    font-size: 12px;
   }
 }
 

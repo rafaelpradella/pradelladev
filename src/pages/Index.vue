@@ -1,11 +1,11 @@
 <template>
 	<Layout>
 		<section id="start">
-			<div class="u-col">
+			<div class="u-col u-col--map">
 				<Map />
 			</div>
 
-			<div class="u-col">
+			<div class="u-col u-col--content">
 				<h1>Rafael Pradella</h1>
 
 				<p>A brazilian front-end developer that loves design + coding</p>
@@ -33,5 +33,14 @@ export default {
   section{ background-color: var(--background); overflow: hidden;}
   section#start{ background-color: var(--map-ocean); display: grid; grid-gap: 40px; grid-template-columns: 1fr 1fr; height: 90vh; align-items: center;}
   svg#map{ position: relative; left: -20%; width: 120%; max-width: 120%;}
-  .u-col{ position: relative; display: inline-block; overflow: hidden; padding: 40px;}
+  .u-col{ position: relative; display: inline-block; overflow: hidden;}
+
+  @media(max-width: 720px){
+	  h1{ margin-top: 0;}
+	  section#start{ grid-gap: 0px; grid-template-rows: 1.1fr .9fr; grid-template-columns: unset;}
+	  svg#map{ position: absolute; left: unset; bottom: -20px; transform: rotate(90deg) translateY(25vw); width: 150%; max-width: unset;}
+	  .u-col{ height: 100%;}
+	  .u-col--map{ overflow: visible;}
+	  .u-col--content{ padding: 0 20px;}
+  }
 </style>
