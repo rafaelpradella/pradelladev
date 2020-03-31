@@ -32,8 +32,13 @@ export default function (Vue, { router, head, isClient }) {
   })
 
   head.meta.push({
-    name: 'theme-color',
-    content: 'var(--map-ocean)'
+    name: 'description',
+    content: 'A brazilian front-end developer, focused on UI Design and site performance'
+  })
+
+  head.meta.push({
+    name: 'background-color',
+    content: 'var(--background)'
   })
 
   head.meta.push({
