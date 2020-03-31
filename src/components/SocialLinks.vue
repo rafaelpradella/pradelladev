@@ -28,13 +28,19 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped >
     ul{ display: block; padding: 0;}
     li{ display: inline-block; list-style: none; margin-right: 15px;}
-    a{ border-radius: 100%; display: flex; align-items: center; justify-content: center; width: 48px; height: 48px;}
-    a:hover, a:active{ opacity: .8;}
     svg{ width: 24px; fill: var(--background);}
-    .u-github{ background-color: var(--line-light);}
-    .u-codesandbox{ background-color: var(--line-yellow);}
-    .u-linkedin{ background-color: var(--line-blue);}
+
+    a{ position: relative; border-radius: 100%; display: flex; align-items: center; justify-content: center; width: 48px; height: 48px;
+        &:before{ position: absolute; top: -6px; left: -6px; bottom: -6px; right: -6px; border-radius: 100%; border: 2px solid black; border-color: inherit; content: ""; opacity: 0; transition: opacity .3s ease-in-out;}
+        &:hover, &:active{ opacity: .8;}
+        &:focus{
+            &:before{ opacity: 1;}
+        }
+    }
+    .u-github{ background-color: var(--line-light); border-color: var(--line-light);}
+    .u-codesandbox{ background-color: var(--line-yellow);  border-color: var(--line-yellow);}
+    .u-linkedin{ background-color: var(--line-blue);  border-color: var(--line-blue);}
 </style>
