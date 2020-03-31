@@ -33,7 +33,8 @@ export default {
   section{ background-color: var(--background); overflow: hidden;}
   section#start{ background-color: var(--map-ocean); display: grid; grid-gap: 40px; grid-template-columns: 1fr 1fr; height: 90vh; align-items: center;}
   svg#map{ position: relative; left: -20%; width: 120%; max-width: 120%;}
-  .u-col{ position: relative; display: inline-block; overflow: hidden;}
+  .u-col{ position: relative; display: inline-block;}
+  .u-col--map{ overflow: hidden;}
 
   @media(max-width: 720px){
 	  h1{ margin-top: 0;}
