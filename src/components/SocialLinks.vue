@@ -43,4 +43,8 @@ export default {
     .u-github{ background-color: var(--line-light); border-color: var(--line-light);}
     .u-codesandbox{ background-color: var(--line-yellow);  border-color: var(--line-yellow);}
     .u-linkedin{ background-color: var(--line-blue);  border-color: var(--line-blue);}
+
+    @media(prefers-color-scheme: light){
+        .u-linkedin svg{ fill: #fff; }
+    }
 </style>

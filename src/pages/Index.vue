@@ -20,18 +20,24 @@
 <script>
 import Map from '~/components/Map/Map.vue'
 import SocialLinks from '~/components/SocialLinks.vue'
+
 export default {
-  components: { Map, SocialLinks },
-  metaInfo: {
-    title: '[WIP] Rafael Pradella: Front-End Developer and UI Desiger',
-    description: 'I´m a 25 years-old front-end developer and user interface designer, and this is my personal landing page'
-  }
+	components: { Map, SocialLinks },
+  
+	metaInfo: {
+		title: '[WIP] Rafael Pradella: Front-End Developer and UI Desiger',
+		description: 'I´m a 25 years-old front-end developer and user interface designer, and this is my personal landing page'
+	},
+
+	mounted() {
+		const AnimationPolyfill = require('web-animations-js/web-animations-next-lite.min.js');
+	}
 }
 </script>
 
 <style>
   section{ background-color: var(--background); overflow: hidden;}
-  section#start{ background-color: var(--map-ocean); display: grid; grid-gap: 40px; grid-template-columns: 1fr 1fr; height: 90vh; align-items: center;}
+  section#start{ background-color: var(--map-ocean); display: grid; grid-gap: 40px; grid-template-columns: 1fr 1fr; height: 100vh; align-items: center;}
   svg#map{ position: relative; left: -20%; width: 120%; max-width: 120%;}
   .u-col{ position: relative; display: inline-block;}
   .u-col--map{ overflow: hidden;}
@@ -42,6 +48,6 @@ export default {
 	  svg#map{ position: absolute; left: unset; bottom: -20px; transform: rotate(90deg) translateY(25vw); width: 150%; max-width: unset;}
 	  .u-col{ height: 100%;}
 	  .u-col--map{ overflow: visible;}
-	  .u-col--content{ padding: 0 20px;}
+	  .u-col--content{ padding: 0 20px; height: auto;}
   }
 </style>
