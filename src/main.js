@@ -1,11 +1,22 @@
 // This is the main.js file. Import global CSS and scripts here.
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
-
 import DefaultLayout from '~/layouts/Default.vue'
+import galite from 'ga-lite'
+
+galite('create', 'UA-163767880-1' , 'auto')
+galite('send', 'pageview')
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
+
+  Vue.mixin({
+    methods:{
+      gaEvent(event, action, label, isInteractive = true){
+        galite('send', 'event', event, action, label, null, { 'nonInteraction': !isInteractive });
+      }
+    }
+  });
 
   head.link.push({
     rel: 'mask-icon',
