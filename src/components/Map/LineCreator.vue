@@ -5,7 +5,7 @@
             ref="animationCircle"
             v-for="(n,index) in lineData.trains"
             :key="index"
-            cx="0" cy="0" r="6"
+            cx="0" cy="0" r="5"
             class="u-newTrain js-newTrain"
         />
     </g>
@@ -74,7 +74,6 @@ export default {
 </script>
 
 <style scoped>
-
     circle{
         fill: var(--background);
         opacity: .5;

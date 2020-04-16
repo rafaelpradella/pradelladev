@@ -3,13 +3,13 @@
   "short_name": "pradella.dev",
   "theme_color": "#000441",
   "background_color": "#000000",
-  "display": "minimal-ui",
+  "display": "standalone",
   "Scope": "/",
   "start_url": "/",
   "icons": [
     {
       "src": "icons/icon-512x512.png",
-      "sizes": "48x48 72x72 96x96 144x144 192x192 512x512",
+      "sizes": "512x512",
       "purpose": "maskable",
       "type": "image/png"
     },
@@ -46,11 +46,6 @@
     {
       "src": "icons/icon-384x384.png",
       "sizes": "384x384",
-      "type": "image/png"
-    },
-    {
-      "src": "icons/icon-512x512.png",
-      "sizes": "512x512",
       "type": "image/png"
     }
   ],
