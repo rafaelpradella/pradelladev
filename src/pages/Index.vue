@@ -9,7 +9,7 @@
 				<h1>Rafael Pradella</h1>
 
 				<p>A brazilian front-end developer that loves design + coding</p>
-				<p> Currently working at <a href="https://www.cuponomia.com.br" title="My current employer" target="_blank" rel="noopener">Cuponomia</a></p>
+				<p> Currently working at <a @click="gaEvent('Home','Employer-Link')" href="https://www.cuponomia.com.br" title="My current employer" target="_blank" rel="noopener">Cuponomia</a></p>
 				<social-links />
 			</div>
 		</section>
