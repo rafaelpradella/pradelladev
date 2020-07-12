@@ -40,6 +40,7 @@ export default {
     },
 
     mounted(){
+        let t0 = performance.now();
         const pathString = this.$refs.lineCreator.querySelector(".js-linePath").getAttribute("d");
         this.pathCoordinates = new PathToArray(pathString);
 
@@ -49,12 +50,15 @@ export default {
                 transform : `translateX(${segment.x}px) translateY(${segment.y}px)`
             });  
         })
+        let t1 = performance.now();
+        console.log(`Creating the keyframe scheme took ${t1 - t0}ms`);
 
         this.createAnimation();
     },
 
     methods: {
         createAnimation(){
+            let t0 = performance.now();
             this.$refs.animationCircle.forEach((circle, index) => {
                 let animationSettings = {
                     delay: (this.lineData.timing * index),
@@ -68,6 +72,8 @@ export default {
     
                 animation.play();
             })
+            let t1 = performance.now();
+            console.log(`Adding the animation to each element took ${t1 - t0}ms`);
         }
     }
 }
