@@ -91,4 +91,4 @@ typings/
 
 # Dist files
 dist/
-src/.temp/
+/src/.temp
