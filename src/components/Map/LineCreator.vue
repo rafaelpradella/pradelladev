@@ -43,10 +43,15 @@ export default {
         const pathString = this.$refs.lineCreator.querySelector(".js-linePath").getAttribute("d");
         this.pathCoordinates = new PathToArray(pathString);
 
-        this.pathCoordinates.forEach(segment => {
+        this.pathCoordinates.forEach((segment, i) => {
+            let isFirstOrLast = this.isFirstOrLast(this.pathCoordinates, i);
             this.animationKeyframe.push({ 
                 easing: "cubic-bezier(.3,0,.3,1)",
-                transform : `translateX(${segment.x}px) translateY(${segment.y}px)`
+                opacity: isFirstOrLast ? "0" : ".5",
+                transform : `
+                    translateX(${segment.x}px) 
+                    translateY(${segment.y}px)
+                `
             });  
         })
 
@@ -54,6 +59,10 @@ export default {
     },
 
     methods: {
+        isFirstOrLast(list, order){
+            return order == 0 || order == list.length -1;
+        },
+
         createAnimation(){
             this.$refs.animationCircle.forEach((circle, index) => {
                 let animationSettings = {
@@ -75,8 +84,9 @@ export default {
 
 <style scoped>
     circle{
+        transition: opacity .5s ease-out;
         fill: var(--background);
-        opacity: .5;
+        opacity: 0;
     }
     .u-linePath {
         fill: unset;

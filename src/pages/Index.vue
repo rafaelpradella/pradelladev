@@ -25,8 +25,8 @@ export default {
 	components: { Map, SocialLinks },
   
 	metaInfo: {
-		title: '[WIP] Rafael Pradella: Front-End Developer and UI Desiger',
-		description: 'I´m a 25 years-old front-end developer and user interface designer, and this is my personal landing page'
+		title: 'Rafael Pradella: Front-End Developer and UI Desiger',
+		description: 'I´m a 26 years-old front-end developer and user interface designer, and this is my personal landing page'
 	},
 
 	mounted() {
