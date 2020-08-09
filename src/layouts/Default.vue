@@ -13,8 +13,8 @@ query {
 </static-query>
 
 <style>
-:root {
-  font-size: 16px;
+:root,
+:root[data-scheme="dark"] {
   --background: #000;
   --text: #E9E9E9;
   --link: #f5cc12;
@@ -33,25 +33,27 @@ query {
   --line-purple: #992CAF;
 }
 
-@media(prefers-color-scheme: light){
-  :root{
-    --background: #F1E9D4;
-    --text: #333333;
-    --link: #A5378B;
+:root[data-scheme="light"] {
+  --background: #F1E9D4;
+  --text: #333333;
+  --link: #A5378B;
 
-    --map-ocean: #A1CAEA;
-    --map-forests: #B6E4BD;
-    
-    --line-green: #038245;
-    --line-red: #C00C0C;
-    --line-blue: #024999;
-    --line-orange: #CE881E;
-    --line-pink: #fa9082;
-    --line-yellow: #F7C617;
-    --line-light: #9C9A8C;
-    --line-emerald: #14AD90;
-    --line-purple: #A5378B;
-  }
+  --map-ocean: #A1CAEA;
+  --map-forests: #B6E4BD;
+  
+  --line-green: #038245;
+  --line-red: #C00C0C;
+  --line-blue: #024999;
+  --line-orange: #CE881E;
+  --line-pink: #fa9082;
+  --line-yellow: #F7C617;
+  --line-light: #9C9A8C;
+  --line-emerald: #14AD90;
+  --line-purple: #A5378B;
+}
+
+:root{
+  font-size: 16px;
 }
 
 @media(max-width: 720px){
