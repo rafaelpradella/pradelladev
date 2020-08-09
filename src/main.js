@@ -46,6 +46,7 @@ export default function (Vue, { router, head, isClient }) {
     content: 'var(--background)'
   })
 
+  //https://joshwcomeau.com/gatsby/dark-mode/ Using this article idea for interrupt at runtime, but keeping it simple still relying on DOM manipulation
   head.script.push({
     innerHTML: `
       const getColorScheme = () => {
