@@ -1,5 +1,8 @@
 <template>
 	<Layout>
+		<!--header>
+			<ColorSelector />
+		</header-->
 		<section id="start">
 			<div class="u-col u-col--map">
 				<Map />
@@ -20,9 +23,10 @@
 <script>
 import Map from '~/components/Map/Map.vue'
 import SocialLinks from '~/components/SocialLinks.vue'
+import ColorSelector from '~/components/ColorSelector.vue'
 
 export default {
-	components: { Map, SocialLinks },
+	components: { Map, SocialLinks, ColorSelector },
   
 	metaInfo: {
 		title: 'Rafael Pradella: Front-End Developer and UI Desiger',
