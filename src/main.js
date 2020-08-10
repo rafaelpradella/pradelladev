@@ -45,4 +45,21 @@ export default function (Vue, { router, head, isClient }) {
     name: 'background-color',
     content: 'var(--background)'
   })
+
+  //https://joshwcomeau.com/gatsby/dark-mode/ Using this article idea for interrupt at runtime, but keeping it simple still relying on DOM manipulation
+  head.script.push({
+    innerHTML: `
+      const getColorScheme = () => {
+        const colorSettings = localStorage.getItem("color-pref");
+        
+        if(colorSettings) return colorSettings;
+        
+        const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+        return userPrefersDark ? "dark" : "light";
+      }
+
+      document.documentElement.dataset.scheme = getColorScheme();
+    `,
+    head: true,
+  })
 }

@@ -73,6 +73,7 @@ typings/
 
 # next.js build output
 .next
+.temp/
 
 # nuxt.js build output
 .nuxt
@@ -91,4 +92,4 @@ typings/
 
 # Dist files
 dist/
-src/.temp/
+src/.temp
