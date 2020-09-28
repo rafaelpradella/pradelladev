@@ -93,3 +93,4 @@ typings/
 # Dist files
 dist/
 src/.temp
+/netlify.toml
