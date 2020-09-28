@@ -95,3 +95,4 @@ typings/
 dist/
 src/.temp
 
+/src/.temp
