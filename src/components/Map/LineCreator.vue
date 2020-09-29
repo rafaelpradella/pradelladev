@@ -74,7 +74,7 @@ export default {
                 };
                 let lineAnimation =  new KeyframeEffect(circle, this.animationKeyframe, animationSettings);
                 let animation = new Animation(lineAnimation, document.timeline);
-                animation.currentTime = animation.effect.getComputedTiming().duration / 2;
+                animation.currentTime = animation.effect.getComputedTiming().duration / 3;
                 animation.play();
             })
         }
