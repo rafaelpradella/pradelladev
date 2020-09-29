@@ -56,18 +56,6 @@ query {
   font-size: 16px;
 }
 
-@media(max-width: 720px){
-  :root{
-    font-size: 13px;
-  }
-}
-
-@media(max-width: 360px){
-  :root{
-    font-size: 12px;
-  }
-}
-
 *, *:before, *:after{
   box-sizing: border-box;
 }
@@ -106,6 +94,21 @@ a:hover, a:active{
 
 a:visited{
   filter: saturate(25%);
+}
+
+@media(max-width: 720px){
+  :root{
+    font-size: 13px;
+  }
+  body{
+    background-color: var(--map-ocean);
+  }
+}
+
+@media(max-width: 360px){
+  :root{
+    font-size: 12px;
+  }
 }
 </style>
 

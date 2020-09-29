@@ -53,7 +53,7 @@ export default {
 
 	@media(max-width: 720px){
 		h1{ margin-top: 0;}
-		section#start{ grid-gap: 0px; grid-template-rows: 1.1fr .9fr; grid-template-columns: unset;}
+		section#start{ grid-gap: 0px; grid-template-rows: 1.1fr .9fr; grid-template-columns: unset; min-height: 90vh; height: 100%;}
 		svg#map{ position: absolute; left: unset; bottom: -20px; transform: rotate(90deg) translateY(25vw); width: 150%; max-width: unset;}
 		.u-col{ height: 100%;}
 		.u-col--map{ overflow: visible;}
