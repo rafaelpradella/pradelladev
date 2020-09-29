@@ -15,6 +15,10 @@
                 <Icons id="linkedin" :is-presentation="false" />
             </a>
         </li>
+        <li>
+            <a class="u-button" href="/resume.pdf" title="My Resume PDF" target="_blank" rel="noopener">Resume</a>
+        </li>
+
     </ul>
 </template>
 
@@ -37,8 +41,8 @@ export default {
     }
 </style>
 
-<style lang="scss" scoped >
-    ul{ display: block; padding: 0;}
+<style lang="scss" scoped>
+    ul{ display: flex; margin-top: 2rem; padding: 0;}
     li{ display: inline-block; list-style: none; margin-right: 15px;}
     svg{ width: 24px; fill: #222;}
 
@@ -49,7 +53,10 @@ export default {
             &:before{ opacity: 1;}
         }
     }
+    .u-button{ background-color: var(--link); border-radius: 48px; color: var(--background); font-size: 1.1em; padding: 0 20px; text-decoration: none; width: auto;
+        &:before{ border-color: var(--link); border-radius: 48px;}
+    }
     .u-github{ background-color: var(--line-light); border-color: var(--line-light);}
-    .u-codesandbox{ background-color: var(--line-yellow);  border-color: var(--line-yellow);}
+    .u-codesandbox{ background-color: var(--line-orange);  border-color: var(--line-orange);}
     .u-linkedin{ background-color: var(--line-blue);  border-color: var(--line-blue);}
 </style>
