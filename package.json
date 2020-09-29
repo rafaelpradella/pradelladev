@@ -7,7 +7,7 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
-    "gridsome": "^0.7.0",
+    "gridsome": "^0.7.21",
     "web-animations-js": "^2.3.2"
   },
   "devDependencies": {
