@@ -34,24 +34,29 @@ export default {
 	},
 
 	mounted() {
-		const AnimationPolyfill = require('web-animations-js/web-animations-next-lite.min.js');
+		if(!'KeyframeEffect' in window){
+			const AnimationPolyfill = require('web-animations-js/web-animations-next-lite.min.js');
+		}
+
 	}
 }
 </script>
 
-<style>
-  section{ background-color: var(--background); overflow: hidden;}
-  section#start{ background-color: var(--map-ocean); display: grid; grid-gap: 40px; grid-template-columns: 1fr 1fr; height: 100vh; align-items: center;}
-  svg#map{ position: relative; left: -20%; width: 120%; max-width: 120%;}
-  .u-col{ position: relative; display: inline-block;}
-  .u-col--map{ overflow: hidden;}
+<style lang="scss">
+	h1{ margin-bottom: 1rem;}
+	p{ line-height: 1.7em; margin: 0;}
+	section{ background-color: var(--background); overflow: hidden;}
+	section#start{ background-color: var(--map-ocean); display: grid; grid-gap: 40px; grid-template-columns: 1fr 1fr; height: 100vh; align-items: center;}
+	svg#map{ position: relative; left: -20%; width: 120%; max-width: 120%;}
+	.u-col{ position: relative; display: inline-block;}
+	.u-col--map{ overflow: hidden;}
 
-  @media(max-width: 720px){
-	  h1{ margin-top: 0;}
-	  section#start{ grid-gap: 0px; grid-template-rows: 1.1fr .9fr; grid-template-columns: unset;}
-	  svg#map{ position: absolute; left: unset; bottom: -20px; transform: rotate(90deg) translateY(25vw); width: 150%; max-width: unset;}
-	  .u-col{ height: 100%;}
-	  .u-col--map{ overflow: visible;}
-	  .u-col--content{ padding: 0 20px; height: auto;}
-  }
+	@media(max-width: 720px){
+		h1{ margin-top: 0;}
+		section#start{ grid-gap: 0px; grid-template-rows: 1.1fr .9fr; grid-template-columns: unset;}
+		svg#map{ position: absolute; left: unset; bottom: -20px; transform: rotate(90deg) translateY(25vw); width: 150%; max-width: unset;}
+		.u-col{ height: 100%;}
+		.u-col--map{ overflow: visible;}
+		.u-col--content{ padding: 0 20px; height: auto;}
+	}
 </style>
