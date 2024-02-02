@@ -4,6 +4,8 @@
   "theme_color": "#000441",
   "background_color": "#000000",
   "display": "standalone",
+  "display_override": ["fullscreen", "minimal-ui"],
+  "id": "/",
   "Scope": "/",
   "start_url": "/",
   "icons": [

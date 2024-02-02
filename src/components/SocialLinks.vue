@@ -22,14 +22,8 @@
     </ul>
 </template>
 
-<script>
-import Icons from "~/components/Icons.vue";
-export default {
-    components: { Icons },
-    data: function(){
-        return{}
-    }
-}
+<script setup >
+import Icons from "../components/Icons.vue";
 </script>
 
 <style lang="scss">
