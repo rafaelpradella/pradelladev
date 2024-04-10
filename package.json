@@ -11,7 +11,7 @@
     "web-animations-js": "^2.3.2"
   },
   "devDependencies": {
-    "node-sass": "^4.13.1",
+    "node-sass": "^9.0.0",
     "sass-loader": "^8.0.2"
   }
 }
