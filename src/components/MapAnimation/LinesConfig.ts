@@ -1,4 +1,6 @@
-const LinesConfig = [
+type TLinesConfig = { id: number, timing: number, trains: number }[];
+
+export const LINES_CONFIG: TLinesConfig = [
     { id: 1, timing: 6000, trains: 12},
     { id: 2, timing: 12000, trains: 16},
     { id: 3, timing: 11500, trains: 14},
@@ -8,6 +10,4 @@ const LinesConfig = [
     { id: 7, timing: 9000, trains: 12},
     //{ id: 8, timing: 000, trains: 0},
     { id: 9, timing: 7500, trains: 8}
-]
-
-module.exports = LinesConfig;
+] as const;

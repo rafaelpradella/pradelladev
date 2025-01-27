@@ -1,10 +1,9 @@
 ---
-import DarkMode from "./DarkMode.layout.astro";
 import "./Default.layout.css";
 
 interface Props {
-  title?: string | undefined;
-  description?: string | undefined;
+  title?: string;
+  description?: string;
 }
 
 const {
@@ -14,20 +13,24 @@ const {
 ---
 
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="description" property="og:description" content={description} />
-  <meta name="viewport" content="width=device-width" />
-  <link rel="mask-icon" sizes="any" href="icons/icon.svg" color="var(--line-emerald)">
-  <link rel="shortcut icon" type="image/x-icon" href="icons/favicon.ico">
-  <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
-  <link rel="manifest" href="manifest.webmanifest">
-  <title>{title}</title>
-  <DarkMode />
-</head>
-<body>
-  <div>
-    <slot />
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" property="og:description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="mask-icon"
+      sizes="any"
+      href="icons/icon.svg"
+      color="var(--line-emerald)"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="icons/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="icons/favicon.ico" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div>
+      <slot />
+    </div>
+  </body>
 </html>

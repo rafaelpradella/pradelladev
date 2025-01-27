@@ -94,3 +94,12 @@ typings/
 dist/
 src/.temp
 /netlify.toml
+
+## Panda
+styled-system
+styled-system-studio
+
+## Astro
+__astro
+.astro/
+.temp/

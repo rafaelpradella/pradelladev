@@ -3,36 +3,29 @@ import Default from "../components/layout/Default.layout.astro";
 
 import Map from "../components/MapAnimation/Map.vue";
 import SocialLinks from "../components/SocialLinks.vue";
-//import ColorSelector from "../components/ColorSelector.vue";
 ---
 
-<script type="ts">
-  if ((!"KeyframeEffect") in window) {
-    require("web-animations-js/web-animations-next-lite.min.js");
-  }
-</script>
-
 <Default>
-  <main>
-    <Map />
-    <div>
-      <h1>Rafael Pradella</h1>
-      <p>A brazilian Front-End Developer that loves coding + design</p>
-      <p>
-        Based in Porto, Portugal. Currently working at <a
-          href="https://www.devexperts.com"
-          target="_blank"
-          rel="noopener">Devexperts</a
-        >
-      </p>
-      <SocialLinks />
-    </div>
-  </main>
+	<main>
+		<Map client:load />
+		<div>
+			<h1>Rafael Pradella</h1>
+			<p>A brazilian Front-End Developer that loves coding + design</p>
+			<p>
+				Based in Porto, Portugal. Currently working at <a
+					href="https://www.devexperts.com"
+					target="_blank"
+					rel="noopener">Devexperts</a
+				>
+			</p>
+			<SocialLinks />
+		</div>
+	</main>
 </Default>
 
 <style type="scss" scoped>
-  main {
-    display: grid;
-    grid-template-columns: 60% auto;
-  }
+	main {
+		display: grid;
+		grid-template-columns: 60% auto;
+	}
 </style>
