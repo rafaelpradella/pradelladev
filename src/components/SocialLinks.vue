@@ -7,23 +7,23 @@ import Icons from "../components/Icons.vue";
 		<li>
 			<a class="u-github" href="https://github.com/rafaelpradella" title="My GitHub profile" target="_blank"
 				rel="noopener">
-				<Icons id="github" :is-presentation="false" />
+				<Icons id="github" :isPresentation="false" iconLabel="GitHub" />
 			</a>
 		</li>
 		<li>
 			<a class="u-codesandbox" href="https://codesandbox.io/u/rafaelpradella" title="My CodeSandbox profile"
 				target="_blank" rel="noopener">
-				<Icons id="codesandbox" :is-presentation="false" />
+				<Icons id="codesandbox" :isPresentation="false" iconLabel="CodeSandbox" />
 			</a>
 		</li>
 		<li>
 			<a class="u-linkedin" href="https://www.linkedin.com/in/rafaelpradella/" title="My LinkedIn profile"
 				target="_blank" rel="noopener">
-				<Icons id="linkedin" :is-presentation="false" />
+				<Icons id="linkedin" :isPresentation="false" iconLabel="LinkedIn" />
 			</a>
 		</li>
 		<li>
-			<a class="u-button" href="/resume.pdf" title="My Resume PDF" target="_blank" rel="noopener">Resume</a>
+			<a class="u-button" href="/resume.pdf" title="Latest Resume (PDF)" target="_blank" rel="noopener">Resume</a>
 		</li>
 
 	</ul>
