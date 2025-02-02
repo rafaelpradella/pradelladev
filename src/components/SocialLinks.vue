@@ -1,5 +1,5 @@
 <script setup>
-import Icons from "../components/Icons.vue";
+import Icons from "@components/Icons.vue";
 </script>
 
 <template>
@@ -29,7 +29,7 @@ import Icons from "../components/Icons.vue";
 	</ul>
 </template>
 
-<style lang="scss">
+<style>
 :root[data-scheme="light"] {
 	.u-github {
 		background-color: var(--text);
@@ -45,7 +45,7 @@ import Icons from "../components/Icons.vue";
 }
 </style>
 
-<style lang="scss" scoped>
+<style scoped>
 ul {
 	display: flex;
 	margin-top: 2rem;

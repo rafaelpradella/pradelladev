@@ -1,12 +1,22 @@
 const ANIMATION_EASE = "cubic-bezier(.3,0,.3,1)";
 
-export const createKeyframeFromCoordinatesList = (pathCoordinatesList: { x: number, y: number }[]) => {
-  return pathCoordinatesList.map((segment, i) => {
-      const isFirstOrLast = i === 0 || i === pathCoordinatesList.length - 1;
-      return {
-          easing: ANIMATION_EASE,
-          opacity: isFirstOrLast ? "0" : ".5",
-          transform: `translateX(${segment.x}px) translateY(${segment.y}px)`
-      }
-  });
+const createKeyframeFromCoordinatesList = (svgPathList: string[]) => {
+  const isLastIndex = (i: number) => i === svgPathList?.length - 1;
+
+  return svgPathList.flatMap((path, i) => [
+    {
+      easing: ANIMATION_EASE,
+      offsetDistance: '0%',
+      offsetPath: `path("${path}")`,
+      opacity: i === 0 ? 0 : 1,
+    },
+    {
+      easing: ANIMATION_EASE,
+      offsetDistance: '100%',
+      offsetPath: `path("${path}")`,
+      opacity: isLastIndex(i) ? 0 : 1,
+    }
+  ]) as Keyframe[];
 };
+
+export { createKeyframeFromCoordinatesList };
