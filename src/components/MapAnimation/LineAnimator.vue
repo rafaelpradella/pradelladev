@@ -63,6 +63,7 @@ onMounted(() => {
 
 .lineAnimator {
     circle {
+        filter: blur(3px);
         fill: var(--background);
     }
 
