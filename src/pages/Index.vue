@@ -11,8 +11,14 @@
 			<div class="u-col u-col--content">
 				<h1>Rafael Pradella</h1>
 
-				<p>A brazilian front-end developer that loves design + coding</p>
-				<p> Currently working at <a href="https://www.cuponomia.com.br" title="My current employer" target="_blank" rel="noopener">Cuponomia</a></p>
+				<p>A brazilian Front-End Developer that loves coding + design</p>
+				<p>
+					Based in Porto, Portugal. Currently working at <a
+						href="https://www.devexperts.com"
+						target="_blank"
+						rel="noopener">Devexperts</a
+					>
+				</p>
 				<social-links />
 			</div>
 		</section>
@@ -30,7 +36,7 @@ export default {
   
 	metaInfo: {
 		title: 'Rafael Pradella: Front-End Developer and UI Desiger',
-		description: 'I´m a 26 years-old front-end developer and user interface designer, and this is my personal landing page'
+		description: 'I´m a 30 years-old front-end developer and user interface designer, and this is my personal landing page'
 	},
 
 	mounted() {
