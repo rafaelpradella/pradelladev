@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import { onMounted, useTemplateRef } from "vue";
-import { pipe } from "effect";
-import { fromNullable, map, match } from "effect/Option";
+import { /* onMounted, */ useTemplateRef } from "vue";
+//import { pipe } from "effect";
+//import { fromNullable, map, match } from "effect/Option";
 
-import { logPipe } from "@utils/debugUtils.ts";
-import { createKeyframeFromCoordinatesList } from "@utils/animationUtils.ts";
-import { splitPathBySegments } from "@utils/svgUtils.ts";
+//import { logPipe } from "@utils/debugUtils.ts";
+//import { createKeyframeFromCoordinatesList } from "@utils/animationUtils.ts";
+//import { splitPathBySegments } from "@utils/svgUtils.ts";
 import { LINES_CONFIG } from "./LinesConfig.ts";
 
 type TSupportedColors = 'light' | 'purple' | 'pink' | 'yellow' | 'orange' | 'red' | 'blue' | 'emerald';
@@ -18,7 +18,7 @@ const { lineId, lineColor } = defineProps<TLineCreatorProps>();
 const currentLineData = LINES_CONFIG.find(line => line.id == lineId);
 const lineColorVariable = `var(--line-${lineColor})`;
 
-const createAnimation = (keyframe: Keyframe[]) => {
+/* const createAnimation = (keyframe: Keyframe[]) => {
     if (!currentLineData || !circlesListEl.value)
         return new Error(`Missing data to start line ${currentLineData?.id ?? ""} animation`);
 
@@ -49,7 +49,7 @@ onMounted(() => {
         map(createKeyframeFromCoordinatesList),
         match({ onNone: console.error, onSome: createAnimation })
     );
-});
+}); */
 </script>
 
 <template>

@@ -32,6 +32,18 @@ import SocialLinks from "@components/SocialLinks.vue";
 		grid-template-columns: 1fr 1fr;
 		height: 100dvh;
 		overflow: hidden;
+
+		@media(max-width: 720px) {
+			grid-gap: 0;
+			grid-template-rows: 1.1fr .9fr;
+			grid-template-columns: unset;
+			min-height: 90dvh;
+		}
+	}
+	section {
+		@media(max-width: 720px) {
+			margin-inline: 2.5rem;
+		}
 	}
 	p {
 		margin-block: .75rem;

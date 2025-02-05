@@ -120,4 +120,10 @@ a {
 		border-radius: 48px;
 	}
 }
+
+li:has(.u-codesandbox) {
+		@media(max-width: 360px) {
+			display: none;
+		}
+	}
 </style>

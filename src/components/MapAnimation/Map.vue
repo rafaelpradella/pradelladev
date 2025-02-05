@@ -49,6 +49,14 @@ svg {
     left: -20%;
     width: 120%;
     max-width: 120%;
+
+    @media(max-width: 720px) {
+        position: relative;
+        top: -10vh;
+        width: 120%;
+        min-width: 120%;
+        transform: rotate(90deg);
+    }
 }
 
 #lands path {
