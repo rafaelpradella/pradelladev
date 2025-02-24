@@ -1,14 +1,22 @@
-const ANIMATION_EASE = "cubic-bezier(.3,0,.3,1)";
+import type { TLinesConfig } from "@components/MapAnimation/LinesConfig";
 
-const createKeyframeFromCoordinatesList = (svgPathList: string[]) => {
-  const keyframesList: Keyframe[]  = svgPathList.map((path, i) => ({
-      easing: ANIMATION_EASE,
-      offsetDistance: '0%',
-      offsetPath: `path("${path}")`,
-      opacity: i === 0 ? 0 : .75,
-  }))
+const createOffsetKeyframe = (lineConfig: TLinesConfig[0]): Keyframe[] => {
+  const {steps, paths} = lineConfig;
+  const stepsWithInitials = [0, ...steps, 100];
 
-  return [...keyframesList, { easing: ANIMATION_EASE, opacity: 0, offsetDistance: '100%'}]
+  return stepsWithInitials.map((step, i) => {
+    const isInitial = i === 0 || i === stepsWithInitials.length - 1;
+
+    return {
+      easing: "cubic-bezier(.3,0,.3,1)",
+      offsetPath: `path("${paths}")`,
+      offsetDistance: `${step}%`,
+      opacity: isInitial ? 0 : 'initial',
+      transform: isInitial ? 'scale(.3)' : 'scale(1)',
+    }
+  });
 }
 
-export { createKeyframeFromCoordinatesList };
+export { createOffsetKeyframe }
+
+

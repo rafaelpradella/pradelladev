@@ -46,6 +46,7 @@ import Icons from "@components/Icons.vue";
 </style>
 
 <style scoped>
+
 ul {
 	display: flex;
 	margin-top: 2rem;
@@ -66,7 +67,7 @@ svg {
 a {
 	position: relative;
 	background-color: var(--background);
-	border-radius: 100%;
+	border-radius: var(--main-radius);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -78,37 +79,42 @@ a {
 		fill: var(--text);
 	}
 
-	&:before {
-		position: absolute;
-		top: -6px;
-		left: -6px;
-		bottom: -6px;
-		right: -6px;
-		border-radius: 100%;
-		border: 2px solid var(--text);
-		border-color: inherit;
-		content: "";
-		opacity: 0;
-		transition: opacity .3s ease-in-out;
-	}
-
-	&:hover,
-	&:active {
-		opacity: .8;
-	}
-
-	&:focus {
-		outline: none;
-
-		&:before {
-			opacity: 1;
+		&:before,
+		&:after {
+			position: absolute;
+			top: -6px;
+			left: -6px;
+			bottom: -6px;
+			right: -6px;
+			border-radius: 100%;
+			border: 2px solid var(--text);
+			border-color: inherit;
+			content: "";
+			opacity: 0;
+			transition: opacity .3s ease-in-out;
+		}
+	
+		&:hover,
+		&:active {
+			opacity: .8;
+		}
+	
+		&:focus-visible {
+			outline: none;
+	
+			&:before {
+				opacity: .75;
+			}
+	
+			&:after {
+				filter: blur(3px) brightness(1.5) saturate(2);
 		}
 	}
 }
 
 .u-button {
 	background-color: var(--link);
-	border-radius: 48px;
+	border-radius: var(--main-radius);
 	color: var(--background);
 	font-size: 1.1em;
 	padding: 0 20px;
@@ -117,7 +123,7 @@ a {
 
 	&:before {
 		border-color: var(--link);
-		border-radius: 48px;
+		border-radius: var(--main-radius);
 	}
 }
 
