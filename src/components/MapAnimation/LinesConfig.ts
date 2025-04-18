@@ -40,4 +40,4 @@ export const LINES_CONFIG: TLinesConfig = [
   { id: 7, duration: 90_000, trains: 15, paths: ANIMATION_PATHS.L7, steps: ANIMATION_STEPS.L7},
   { id: 8, duration: 75_000, trains: 12, paths: ANIMATION_PATHS.L8, steps: ANIMATION_STEPS.L8},
   { id: 9, duration: 70_000, trains: 15, paths: ANIMATION_PATHS.L9, steps: ANIMATION_STEPS.L9},
-] as const;
+] as const;  

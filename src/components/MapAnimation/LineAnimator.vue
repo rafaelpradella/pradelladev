@@ -17,12 +17,13 @@ type TLineCreatorProps = { lineId: number; lineColor: TSupportedColors };
 
 const animatedItensEl = useTemplateRef<SVGPathElement[]>("animationRef");
 const { lineId, lineColor } = defineProps<TLineCreatorProps>();
+
 const currentLineData = LINES_CONFIG.find((line) => line.id == lineId);
 const lineColorVariable = `var(--line-${lineColor})`;
 
 const createAnimation = (keyframe: Keyframe[]) => {
   if (!currentLineData || !animatedItensEl.value)
-    return new Error(
+    throw new Error(
       `Missing data to start line ${currentLineData?.id ?? ""} animation`
     );
 
@@ -41,8 +42,9 @@ const createAnimation = (keyframe: Keyframe[]) => {
     );
     const animation = new Animation(lineAnimation, document.timeline);
     const frameDuration = animation.effect?.getComputedTiming().duration;
-    if (typeof frameDuration === "number")
-      animation.currentTime = frameDuration / 3;
+    if (typeof frameDuration === "number") {
+      animation.currentTime = frameDuration / 2;
+    }
     animation.play();
   });
 };
