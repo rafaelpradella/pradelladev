@@ -18,7 +18,7 @@ type TLineCreatorProps = { lineId: number; lineColor: TSupportedColors };
 const animatedItensEl = useTemplateRef<SVGPathElement[]>("animationRef");
 const { lineId, lineColor } = defineProps<TLineCreatorProps>();
 
-const currentLineData = LINES_CONFIG.find((line) => line.id == lineId);
+const currentLineData = LINES_CONFIG.find((line) => line.id === lineId);
 const lineColorVariable = `var(--line-${lineColor})`;
 
 const createAnimation = (keyframe: Keyframe[]) => {

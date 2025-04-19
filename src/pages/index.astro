@@ -1,13 +1,13 @@
 ---
 import Default from "@components/layout/Default.layout.astro";
 
-import Map from "@components/MapAnimation/Map.vue";
+import MapAnimation from "@components/MapAnimation/index.vue";
 import SocialLinks from "@components/SocialLinks.vue";
 ---
 
 <Default>
 	<main>
-		<Map client:load />
+		<MapAnimation client:load />
 		<section>
 			<h1>Rafael Pradella</h1>
 			<p>A brazilian Front-End Developer that loves coding + design</p>
