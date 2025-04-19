@@ -7,7 +7,7 @@
 	},
 	"files": {
 		"ignoreUnknown": false,
-		"ignore": []
+		"ignore": [".temp", ".astro", "node_modules", "dist", "build", "out"]
 	},
 	"formatter": {
 		"enabled": true,

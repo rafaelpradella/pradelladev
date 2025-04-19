@@ -30,6 +30,9 @@ importers:
       '@vitest/ui':
         specifier: ^3.0.4
         version: 3.0.4(vitest@3.0.5)
+      husky:
+        specifier: ^9.1.7
+        version: 9.1.7
       vitest:
         specifier: ^3.0.5
         version: 3.0.5(@types/debug@4.1.12)(@types/node@22.10.5)(@vitest/ui@3.0.4)(lightningcss@1.25.1)(sass@1.83.1)(terser@5.37.0)
@@ -1643,6 +1646,11 @@ packages:
   human-signals@8.0.0:
     resolution: {integrity: sha512-/1/GPCpDUCCYwlERiYjxoczfP0zfvZMU/OWgQPMya9AbAE24vseigFdhAMObpc8Q4lc/kjutPfUddDYyAmejnA==}
     engines: {node: '>=18.18.0'}
+
+  husky@9.1.7:
+    resolution: {integrity: sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA==}
+    engines: {node: '>=18'}
+    hasBin: true
 
   immutable@5.0.3:
     resolution: {integrity: sha512-P8IdPQHq3lA1xVeBRi5VPqUm5HDgKnx0Ru51wZz5mjxHr5n3RWhjIpOFU7ybkUxfB+5IToy+OLaHYDBIWsv+uw==}
@@ -4482,6 +4490,8 @@ snapshots:
   http-cache-semantics@4.1.1: {}
 
   human-signals@8.0.0: {}
+
+  husky@9.1.7: {}
 
   immutable@5.0.3:
     optional: true
