@@ -1,8 +1,9 @@
 <script setup>
-import MapPaths from "./MapPaths.vue";
 import LineTransferIcons from "./LineTransferIcons.vue";
+import MapPaths from "./MapPaths.vue";
 
-const MAP_DESCRIPTION_A11Y = "A ficticious and colorful subway map animating some dots to represent the trains flux";
+const MAP_DESCRIPTION_A11Y =
+	"A ficticious and colorful subway map animating some dots to represent the trains flux";
 </script>
 
 <template>
