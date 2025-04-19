@@ -1,18 +1,18 @@
 <script lang="ts" setup>
-import { onMounted, useTemplateRef } from "vue";
 import { createOffsetKeyframe } from "@utils/animationUtils.ts";
+import { onMounted, useTemplateRef } from "vue";
 import { LINES_CONFIG } from "./LinesConfig.ts";
 
 type TSupportedColors =
-  | "light"
-  | "purple"
-  | "pink"
-  | "yellow"
-  | "orange"
-  | "red"
-  | "blue"
-  | "emerald"
-  | "green";
+	| "light"
+	| "purple"
+	| "pink"
+	| "yellow"
+	| "orange"
+	| "red"
+	| "blue"
+	| "emerald"
+	| "green";
 type TLineCreatorProps = { lineId: number; lineColor: TSupportedColors };
 
 const animatedItensEl = useTemplateRef<SVGPathElement[]>("animationRef");
@@ -22,38 +22,38 @@ const currentLineData = LINES_CONFIG.find((line) => line.id == lineId);
 const lineColorVariable = `var(--line-${lineColor})`;
 
 const createAnimation = (keyframe: Keyframe[]) => {
-  if (!currentLineData || !animatedItensEl.value)
-    throw new Error(
-      `Missing data to start line ${currentLineData?.id ?? ""} animation`
-    );
+	if (!currentLineData || !animatedItensEl.value)
+		throw new Error(
+			`Missing data to start line ${currentLineData?.id ?? ""} animation`,
+		);
 
-  animatedItensEl.value.forEach((circle, i) => {
-    const animationSettings: KeyframeEffectOptions = {
-      delay: (currentLineData.duration / currentLineData.trains) * 2 * i,
-      direction: i % 2 ? "reverse" : "normal",
-      duration: currentLineData.duration,
-      fill: "forwards",
-      iterations: Infinity,
-    };
-    const lineAnimation = new KeyframeEffect(
-      circle,
-      keyframe,
-      animationSettings
-    );
-    const animation = new Animation(lineAnimation, document.timeline);
-    const frameDuration = animation.effect?.getComputedTiming().duration;
-    if (typeof frameDuration === "number") {
-      animation.currentTime = frameDuration / 2;
-    }
-    animation.play();
-  });
+	animatedItensEl.value.forEach((circle, i) => {
+		const animationSettings: KeyframeEffectOptions = {
+			delay: (currentLineData.duration / currentLineData.trains) * 2 * i,
+			direction: i % 2 ? "reverse" : "normal",
+			duration: currentLineData.duration,
+			fill: "forwards",
+			iterations: Number.POSITIVE_INFINITY,
+		};
+		const lineAnimation = new KeyframeEffect(
+			circle,
+			keyframe,
+			animationSettings,
+		);
+		const animation = new Animation(lineAnimation, document.timeline);
+		const frameDuration = animation.effect?.getComputedTiming().duration;
+		if (typeof frameDuration === "number") {
+			animation.currentTime = frameDuration / 2;
+		}
+		animation.play();
+	});
 };
 
 onMounted(() => {
-  if (!currentLineData) return;
+	if (!currentLineData) return;
 
-  const offsetKeyframe = createOffsetKeyframe(currentLineData);
-  return createAnimation(offsetKeyframe);
+	const offsetKeyframe = createOffsetKeyframe(currentLineData);
+	return createAnimation(offsetKeyframe);
 });
 </script>
 

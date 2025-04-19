@@ -1,6 +1,8 @@
 <script setup lang="ts">
 type TIconId = "codesandbox" | "github" | "linkedin";
-type TIconProps = { id: TIconId; isPresentation: true; iconLabel: undefined } | { id: TIconId; isPresentation: false; iconLabel: string };
+type TIconProps =
+	| { id: TIconId; isPresentation: true; iconLabel: undefined }
+	| { id: TIconId; isPresentation: false; iconLabel: string };
 
 const { id, isPresentation, iconLabel } = defineProps<TIconProps>();
 </script>
