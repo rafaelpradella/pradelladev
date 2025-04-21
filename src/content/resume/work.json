@@ -1,0 +1,62 @@
+[
+  {
+    "company": "Devexperts",
+    "companyUrl": "https://devexperts.com",
+    "startDate": "2022-10",
+    "roleTitle": "Frontend Developer",
+    "description": [
+      "Create and maintain accessible components using Atomic Design and Storybook for documenting;",
+      "Discussing and implementing new features for a finance streaming platform with stakeholders, design and development team;",
+      "Analyzing and profiling main routes for Core Web Vitals. Gave [a talk](https://www.meetup.com/pt-BR/dxtechtalk-porto/events/293167436/?eventOrigin=group_events_list) for the office about performance good practices;"
+    ],
+    "techStack": [
+      "Next.js + React",
+      "RxJS + Redux Saga",
+      "fp-ts + io-ts",
+      "Jest + Storybook",
+      "HTTP Live Streaming",
+      "CSS Modules + Panda CSS"
+    ]
+  },
+  {
+    "company": "Cuponomia",
+    "companyUrl": "https://play.google.com/store/apps/details?id=com.cuponomia",
+    "startDate": "2021-01",
+    "endDate": "2022-10",
+    "roleTitle": "Mobile Front-End Developer",
+    "description": [
+      "Create and maintain a subset of the main Design System focused on multiplatform development;",
+      "Creating and discussing new screens and features, based on product's goals. Using Firebase A/B testing for validating our hypothesis;",
+      "Analyzing components and screens performance using React Profiler + Android Studio/Xcode tools;"
+    ],
+    "techStack": [
+      "React Native",
+      "Typescript",
+      "SWR + Redux (State management)",
+      "RN Testing Library  + Jest",
+      "Firebase (Analytics, A/B Testing)",
+      "Bitrise (CI/CD)"
+    ]
+  },
+  {
+    "company": "Cuponomia",
+    "companyUrl": "https://www.cuponomia.com.br",
+    "startDate": "2013-11",
+    "endDate": "2021-01",
+    "roleTitle": "Sr. Front-End Developer",
+    "description": [
+      "Bridging the design / front-end teams creating Design System components + helpers, and ensuring it's correct usage;",
+      "Create and discuss new features for the Site and Web Extensions projects;",
+      "Partcipating on the hiring process and onboarding for new developers;",
+      "Developing internal tools/pages using Vue.js and ESM for helping content teams to populate our products and campaigns;",
+      "Analyzing main pages performance (build/assets size, load priority, Core Web Vitals) looking for opportunities to improve;"
+    ],
+    "techStack": [
+      "Vue.js 2",
+      "ES2016",
+      "Web Extensions API",
+      "Jenkins (CI/CD)",
+      ".NET MVC w/ Razor"
+    ]
+  }
+]

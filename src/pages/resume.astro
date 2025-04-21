@@ -1,0 +1,37 @@
+---
+import { getEntry } from "astro:content";
+import Default from "@components/layout/Default.layout.astro";
+import { marked } from "marked";
+
+const workEntry = await getEntry("resume", "work");
+const workData = workEntry?.data;
+---
+
+<Default>
+  <main>
+    <header>
+      {
+        workData?.map((entry) => (
+          <div>
+            <h2>{entry.roleTitle}</h2>
+            <a href={entry.companyUrl} title={`Go to company ${entry.company}`}>
+              <p>{entry.company}</p>
+            </a>
+            <p>{entry.startDate}</p>
+            <ul>
+              {entry.description.map((desc) => {
+                const parsedDesc = marked.parse(desc);
+                return <li set:html={parsedDesc} />;
+              })}
+            </ul>
+          </div>
+        ))
+      }
+      <pre>{JSON.stringify(workData)}</pre>
+      <h1>Rafael Pradella</h1>
+      <p>Front-End Developer UI Developer</p>
+      <p>Based in Porto, Portugal</p>
+      <nav></nav>
+    </header>
+  </main></Default
+>

@@ -8,6 +8,8 @@
 			"@layout/*": ["src/components/layout/*"],
 			"@pages/*": ["src/pages/*"],
 			"@utils/*": ["src/utils/*"]
-		}
-	}
+		},
+		"strictNullChecks": true,
+    "allowJs": true
+	},
 }
